@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "c5705906-90fc-4609-8470-d950a35612eb",
-		"name": "Posts",
+		"name": "文章CRUD",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "9556710"
 	},
@@ -26,8 +26,26 @@
 		{
 			"name": "新增文章",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"content內容\",\r\n    \"image\": null,\r\n    \"name\": \"小花\",\r\n    \"likes\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_API}}/posts",
+					"host": [
+						"{{BASE_API}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
 			},
 			"response": []
 		},
@@ -66,10 +84,19 @@
 			"response": []
 		},
 		{
-			"name": "更新單一文章 Copy",
+			"name": "更新單一文章",
 			"request": {
 				"method": "PATCH",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"更新後的樣子\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "{{BASE_API}}/posts/:id",
 					"host": [
@@ -82,7 +109,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": ""
+							"value": "6626862776303b2bdcd25d3f"
 						}
 					]
 				}
