@@ -1,9 +1,10 @@
 const headers = require('./headers')
-function errorHandle (res) {
+function errorHandle (res, error) {
   res.writeHead(400, headers)
+  console.error(res)
   res.write(JSON.stringify({
     "status": "false",
-    "message": "欄位錯誤或者查無此id"
+    "message": error || "欄位錯誤或者查無此id"
   }))
   res.end()
 }
