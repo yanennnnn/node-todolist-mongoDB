@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "c5705906-90fc-4609-8470-d950a35612eb",
+		"_postman_id": "f7ac5e90-ec70-47cc-b968-93e2069e9da5",
 		"name": "文章CRUD",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "9556710"
@@ -115,6 +115,12 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_API",
+			"value": " 127.0.0.1:3000"
 		}
 	]
 }
